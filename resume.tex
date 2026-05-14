@@ -1,0 +1,131 @@
+%-------------------------
+% Academic CV in the style of Qianqian Wang's CV
+%-------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+% Section formatting: bold title with horizontal rule below
+\titleformat{\section}
+  {\Large\bfseries}
+  {}{0em}{}[\vspace{-6pt}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Two-column entry: bold title left, right-aligned date
+\newcommand{\cventry}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par%
+}
+
+% Underline author's own name in publication list
+\newcommand{\me}[1]{\underline{#1}}
+
+\begin{document}
+
+%---------- HEADING ----------
+{\huge\bfseries Jiahao Shao}\\[4pt]
+\href{mailto:jhshao1027@gmail.com}{jhshao1027@gmail.com}\\
+\href{https://jiahao-shao1.github.io}{jiahao-shao1.github.io}
+
+%---------- EDUCATION ----------
+\section*{Education}
+
+\cventry{The Hong Kong University of Science and Technology}{2026 -- Present}
+Ph.D. in Computer Science
+
+\vspace{6pt}
+
+\cventry{Zhejiang University}{2020 -- 2024}
+B.E. in Automation
+
+%---------- POSITIONS ----------
+\section*{Experiences}
+
+\cventry{Ant Group}{2024 -- 2026}
+Research Intern\\
+Advisor: \href{https://shenyujun.github.io/}{Yujun Shen}
+
+\vspace{6pt}
+
+\cventry{Zhejiang University}{2023 -- Present}
+Research Assistant\\
+Advisor: \href{https://yiyiliao.github.io/}{Yiyi Liao}
+
+%---------- RESEARCH INTERESTS ----------
+\section*{Research Interests}
+
+My long-term research goal is to build a general-purpose world model that can understand, simulate, and interact with the physical world. My research interests lie at the intersection of Computer Vision, Generative Modeling, and Embodied AI.
+
+%---------- PUBLICATIONS ----------
+\section*{Publications}
+
+(* Equal Contribution; $\dagger$ Equal Advising)
+
+\begin{enumerate}[label={[\arabic*]},leftmargin=*,itemsep=4pt]
+  \item \me{Jiahao Shao}, Yuanbo Yang, Yiyi Liao, Yujun Shen, Ceyuan Yang$\dagger$, Yinghao Xu$\dagger$,
+  ``Thinking With Tools, Not With Pixels: Tool Calls as Text Scaffolds for Visual Reasoning'',
+  \textit{Under review}, 2026.
+
+  \item Yuanbo Yang, \me{Jiahao Shao}, Yiyi Liao, Jun Gao,
+  ``From a Spiral to a Sink: How Positional Encoding Shapes Attention Sinks in Diffusion Transformers'',
+  \textit{Under review}, 2026.
+
+  \item Zhen Xu*, Hongyu Zhou*, Sida Peng, Haotong Lin, Haoyu Guo, \me{Jiahao Shao}, Peishan Yang, Qinglin Yang, Sheng Miao, Xingyi He, Yifan Wang, Yue Wang, Ruizhen Hu, Yiyi Liao, Xiaowei Zhou, Hujun Bao,
+  ``Towards Depth Foundation Model: Recent Trends in Vision-Based Depth Estimation'',
+  \textit{Computational Visual Media}, 2026.
+
+  \item Chunyang Li*, Yuanbo Yang*, \me{Jiahao Shao}*, Hongyu Zhou, Katja Schwarz, Yiyi Liao,
+  ``ReRoPE: Repurposing RoPE for Relative Camera Control'',
+  \textit{SIGGRAPH}, 2026.
+
+  \item Jiabao Wang, Hongyu Zhou, Yuanbo Yang, \me{Jiahao Shao}, Yiyi Liao,
+  ``The Constant Eye: Benchmarking and Bridging Appearance Robustness in Autonomous Driving'',
+  arXiv preprint, 2026.
+
+  \item Hanlei Guo, \me{Jiahao Shao}, Xinya Chen, Xiyang Tan, Sheng Miao, Yujun Shen, Yiyi Liao,
+  ``ScenDi: 3D-to-2D Scene Diffusion Cascades for Urban Generation'',
+  \textit{Computer Vision and Pattern Recognition (CVPR)}, 2026.
+
+  \item Yuanbo Yang*, \me{Jiahao Shao}*, Xinyang Li, Yujun Shen, Andreas Geiger, Yiyi Liao,
+  ``Prometheus: 3D-Aware Latent Diffusion Models for Feed-Forward Text-to-3D Scene Generation'',
+  \textit{Computer Vision and Pattern Recognition (CVPR)}, 2025.
+
+  \item \me{Jiahao Shao}*, Yuanbo Yang*, Hongyu Zhou, Youmin Zhang, Yujun Shen, Vitor Guizilini, Yue Wang, Matteo Poggi, Yiyi Liao,
+  ``Learning Temporally Consistent Video Depth from Video Diffusion Priors'',
+  \textit{Computer Vision and Pattern Recognition (CVPR)}, 2025.
+
+  \item Hongyu Zhou, \me{Jiahao Shao}, Lu Xu, Dongfeng Bai, Weichao Qiu, Bingbing Liu, Yue Wang, Andreas Geiger, Yiyi Liao,
+  ``HUGS: Holistic Urban 3D Scene Understanding via Gaussian Splatting'',
+  \textit{Computer Vision and Pattern Recognition (CVPR)}, 2024.
+\end{enumerate}
+
+%---------- HONORS AND AWARDS ----------
+\section*{Honors and Awards}
+
+\noindent\begin{tabularx}{\textwidth}{@{}X r@{}}
+Finalist Award, Mathematical Contest in Modeling (top 2\%) & 2023 \\
+Second-prize Scholarship of Zhejiang University & 2020 -- 2022 \\
+\end{tabularx}
+
+%---------- OPEN SOURCE PROJECTS ----------
+\section*{Open Source Projects}
+
+\cventry{\href{https://github.com/jiahao-shao1/sjh-skills}{sjh-skills}}{}
+A collection of Claude Code skills for research workflow automation.
+
+%---------- SKILLS ----------
+\section*{Skills}
+
+Python, C, PyTorch, PyTorch Lightning, MATLAB, \LaTeX, Linux
+
+\end{document}
